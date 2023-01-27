@@ -1,0 +1,22 @@
+// Importation des polices
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap');
+
+// Déclaration des variables
+
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+
+// Paramètres généraux
+
+p, h1, h2, h3, ul, li, a {
+    color: $primary-color;
+    font-family: montserrat, sans-serif;
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.container {
+    width: 100%;
+}
