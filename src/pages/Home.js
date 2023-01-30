@@ -1,17 +1,24 @@
 import React from "react";
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
-import Gallery from "../components/Gallery";
-import Navigation from "../components/Navigation";
+import Cards from "../components/Cards";
+import rentals from "../data/data.json";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container">
-      <Navigation />
+    <>
       <Banner />
-      <Gallery />
-      <Footer />
-    </div>
+      <main className="gallery">
+        {rentals.map((rental) => (
+          <article key={rental.id}>
+            <Link to={`/rental/${rental.id}`}>
+              <Cards image={rental.cover} title={rental.title} />
+            </Link>
+          </article>
+        ))}
+        ;
+      </main>
+    </>
   );
 };
 

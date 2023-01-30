@@ -9,6 +9,10 @@ $secondary-color: #F6F6F6;
 
 // Paramètres généraux
 
+body {
+    margin: 0;
+}
+
 p, h1, h2, h3, ul, li, a {
     color: $primary-color;
     font-family: montserrat, sans-serif;

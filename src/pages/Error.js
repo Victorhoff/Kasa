@@ -5,7 +5,6 @@ import Navigation from "../components/Navigation";
 const Error = () => {
   return (
     <div>
-      <Navigation />
       <main className="error">
         <h1 className="error__title">404</h1>
         <p className="error__msg">
@@ -15,9 +14,6 @@ const Error = () => {
           Retourner sur la page d'accueil
         </a>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 };

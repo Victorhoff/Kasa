@@ -1,0 +1,23 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Accomodation from "./pages/Accomodation";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import React from "react";
+
+const Router = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/rental/:id" element={<Accomodation />} />
+        {/* path="*" mène à une page d'erreur si jamais l'url ne correspond à rien de déclaré */}
+        <Route path="*" element={<Error />} />
+      </Routes>
+      ;
+    </div>
+  );
+};
+
+export default Router;
