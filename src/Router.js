@@ -7,7 +7,7 @@ import React from "react";
 
 const Router = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
@@ -16,7 +16,7 @@ const Router = () => {
         <Route path="*" element={<Error />} />
       </Routes>
       ;
-    </div>
+    </>
   );
 };
 

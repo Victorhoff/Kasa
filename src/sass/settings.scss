@@ -7,6 +7,16 @@
 $primary-color: #FF6060;
 $secondary-color: #F6F6F6;
 
+// Déclaration des mixins
+
+@mixin arrow {
+    position: absolute;
+    top: 43%;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
 // Paramètres généraux
 
 body {
