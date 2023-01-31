@@ -17,6 +17,13 @@ $secondary-color: #F6F6F6;
     user-select: none;
 }
 
+@mixin marginAuto {
+    display: flex;
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+}
+
 // Paramètres généraux
 
 body {

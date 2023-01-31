@@ -114,6 +114,65 @@
     }
 }
 
+// Accomodation 
+
+.accomodation {
+    margin: 20px auto 0px auto;
+    width: 90%;
+    max-width: 1240px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        font-size: 36px;
+    }
+
+    &__location {
+        @include marginAuto;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    &__host {
+        display: flex;
+        align-items: center;
+
+        &__image {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+        }
+
+        &__name {
+            width: 100px;
+            font-size: 18px
+        }
+    }
+
+}
+
+.tags {
+    &__container {
+        @include marginAuto;
+        padding: 0;
+        gap: 10px;
+    }
+
+    &__list {
+        background-color: $primary-color;
+        color: white;
+        font-size: 14px;
+        width: 115px;
+        height: 25px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 // Slider
 
 .rightArrow {

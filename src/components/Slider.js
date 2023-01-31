@@ -16,34 +16,52 @@ const Slider = ({ slides }) => {
     return null;
   }
 
+  if (slides.length > 1) {
+    return (
+      <section className="slider">
+        <img
+          src="/img/leftArrow.png"
+          alt="Flèche gauche"
+          className="leftArrow"
+          onClick={prevSlide}
+        />
+        <img
+          src="/img/rightArrow.png"
+          alt="Flèche droite"
+          className="rightArrow"
+          onClick={nextSlide}
+        />
+        {slides.map((slides, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <img
+                  key={index}
+                  src={slides}
+                  alt="Photo du logement"
+                  className="slider__image"
+                />
+              )}
+            </div>
+          );
+        })}
+      </section>
+    );
+  }
+
   return (
     <section className="slider">
-      <img
-        src="/img/leftArrow.png"
-        alt="Flèche gauche"
-        className="leftArrow"
-        onClick={prevSlide}
-      />
-      <img
-        src="/img/rightArrow.png"
-        alt="Flèche droite"
-        className="rightArrow"
-        onClick={nextSlide}
-      />
       {slides.map((slides, index) => {
         return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img
-                key={index}
-                src={slides}
-                alt="Photo du logement"
-                className="slider__image"
-              />
-            )}
+          <div className="slide active">
+            <img
+              src={slides}
+              alt="Photo du logement"
+              className="slider__image"
+            />
           </div>
         );
       })}
