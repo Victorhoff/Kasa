@@ -4,7 +4,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <Link to="/">
-        <img className="navigation__logo" src="/img/logo.png" alt="logo kasa" />
+        <img className="navigation__logo" src="/img/LOGO.png" alt="logo kasa" />
       </Link>
       <ul>
         <NavLink to="/">
