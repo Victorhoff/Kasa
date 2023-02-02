@@ -16,7 +16,6 @@ const Home = () => {
             </Link>
           </article>
         ))}
-        ;
       </main>
     </>
   );

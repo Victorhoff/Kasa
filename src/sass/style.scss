@@ -164,12 +164,13 @@
         background-color: $primary-color;
         color: white;
         font-size: 14px;
-        width: 115px;
+        min-width: 115px;
         height: 25px;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0px 5px
     }
 }
 
@@ -237,6 +238,72 @@
         margin: 100px 0px;
         font-size: 18px;
     }
+}
+
+.collapse {
+    @include marginAuto;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    &__dropdown {
+        width: 47%;
+
+        &__arrow {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        &__content {
+            background-color: $secondary-color;
+            height: 250px;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: column wrap;
+
+                & p {
+                    font-size: 18px;
+                    padding-left: 15px;
+                    margin: 34px 0px;
+                }
+
+                & li {
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+
+                & ul {
+                    padding-left: 15px;
+                }
+            }
+            
+            &__title {
+                width: 100%;
+                background-color: $primary-color;
+                color: white;
+                border-radius: 10px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                & h2 {
+                    margin-left: 10px;
+                    color: white;
+                    font-size: 18px;
+                }            
+            }
+    }
+}
+
+.dropdownArrow {
+    margin-right: 10px;
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.dropdownArrow.true {
+    transform: rotate(0deg);
 }
 
 // Footer
