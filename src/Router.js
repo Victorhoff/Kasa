@@ -15,7 +15,6 @@ const Router = () => {
         {/* path="*" mène à une page d'erreur si jamais l'url ne correspond à rien de déclaré */}
         <Route path="*" element={<Error />} />
       </Routes>
-      ;
     </>
   );
 };

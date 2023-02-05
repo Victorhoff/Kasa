@@ -1,4 +1,4 @@
-import React, { useState, useParams } from "react";
+import React, { useState } from "react";
 
 const Collapse = (props) => {
   const [open, setOpen] = useState(false);
@@ -7,8 +7,8 @@ const Collapse = (props) => {
   };
 
   return (
-    <div className="collapse__dropdown">
-      <div onClick={openCollapse} className="collapse__dropdown__title">
+    <>
+      <button onClick={openCollapse} className="collapse__dropdown__title">
         <h2>{props.label}</h2>
         <div className="collapse__dropdown__arrow" onClick={openCollapse}>
           <img
@@ -17,13 +17,13 @@ const Collapse = (props) => {
             className={`dropdownArrow ${open}`}
           />
         </div>
-      </div>
+      </button>
       {open && (
         <div className="collapse__dropdown__content">
           <>{props.children}</>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,121 @@
+// Slider
+
+.rightArrow {
+    @include arrow;
+    right: 40px;
+}
+
+.leftArrow {
+    @include arrow;
+    left: 40px;
+}
+
+.slider {
+    @include marginAuto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        width: 100%;
+        max-width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.slide.active {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+// Accomodation info
+
+.accomodation {
+    @include marginAuto;
+    margin: 20px auto 0px auto;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        font-size: 36px;
+        margin: 0
+    }
+
+    &__location {
+        @include marginAuto;
+        font-size: 18px;
+    }
+
+    &__host {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__image {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+        }
+
+        &__name {
+            font-size: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-right: 10px;
+        }
+    }
+
+}
+
+.rating__tags__container {
+    @include marginAuto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    &__container {
+        display: flex;
+        padding: 0;
+        gap: 10px;
+        margin: 10px 0px;
+        align-items: center;
+    }
+
+    &__list {
+        background-color: $primary-color;
+        color: white;
+        font-size: 14px;
+        min-width: 115px;
+        height: 25px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px
+    }
+}
+
+.rating {
+    display: flex;
+    width: 150px;
+    height: 40px;
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+}

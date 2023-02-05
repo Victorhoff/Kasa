@@ -1,38 +1,53 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import Banner from "../components/Banner";
+import Collapse from "../components/Collapse";
 
 const About = () => {
   return (
-    <div>
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
-        provident minima facilis doloremque aut, architecto officia quod
-        perferendis optio ex, dolorum eveniet. Quidem modi id ex accusamus iure
-        sunt, laudantium ad eaque suscipit magni ab fugit aspernatur illum
-        ratione commodi nam placeat totam voluptatibus rerum veniam, consequatur
-        veritatis a perferendis. Rem odit incidunt impedit commodi animi amet!
-        Nam tempora qui sit modi maxime corrupti quibusdam, labore similique
-        facere doloremque nisi! Officia, labore nemo. Dolorem assumenda fugit
-        magnam dicta vitae quos, sint vero repellat, commodi non cumque omnis
-        odio, impedit nihil aperiam neque maxime explicabo! Nam fugiat nobis
-        sequi porro. Laboriosam.
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui optio quae
-        in natus alias nesciunt at, tempore, ea quasi architecto quis sed saepe
-        excepturi aperiam molestias voluptatum neque debitis! Vel recusandae
-        deleniti, tempore vitae obcaecati commodi dignissimos delectus ad
-        dolores provident sequi repellat, consequuntur esse alias, dolore
-        voluptatum eligendi asperiores! Corporis corrupti a, officia expedita
-        nostrum vero sed voluptate, debitis sequi excepturi sunt ex aut saepe
-        dolorum et voluptatum eum. Nostrum eum earum perspiciatis fugit?
-        Quisquam non, accusamus laboriosam, consectetur adipisci ut, deserunt
-        iure odio ab praesentium et! Commodi praesentium velit laboriosam nam
-        quam voluptates neque maxime culpa deserunt illum.
-      </p>
-    </div>
+    <main>
+      <Banner backgroundImg={"/img/background.png"} />
+      <div className="collapse__about">
+        <div className="collapse__about__container">
+          <Collapse label="Fiabilité">
+            <p>
+              Les annonces postées sur Kasa garantissent une fiabilité totale.
+              Les photos sont conformes aux logements, et toutes les
+              informations sont régulièrement vérifiées par nos équipes.
+            </p>
+          </Collapse>
+        </div>
+        <div className="collapse__about__container">
+          <Collapse label="Respect">
+            <p>
+              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+              comportement discriminatoire ou de perturbation du voisinage
+              entraînera une exclusion de notre plateforme.
+            </p>
+          </Collapse>
+        </div>
+        <div className="collapse__about__container">
+          <Collapse label="Service">
+            <p>
+              Nos équipes se tiennent à votre disposition pour vous fournir une
+              expérience parfaite. N'hésitez pas à nous contacter si vous avez
+              la moindre question.
+            </p>
+          </Collapse>
+        </div>
+        <div className="collapse__about__container">
+          <Collapse label="Responsabilité">
+            <p>
+              La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
+              pour les voyageurs, chaque logement correspond aux critères de
+              sécurité établis par nos services. En laissant une note aussi bien
+              à l'hôte qu'au locataire, cela permet à nos équipes de vérifier
+              que les standards sont bien respectés. Nous organisons également
+              des ateliers sur la sécurité domestique pour nos hôtes.
+            </p>
+          </Collapse>
+        </div>
+      </div>
+    </main>
   );
 };
 

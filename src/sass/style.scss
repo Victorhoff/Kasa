@@ -1,327 +1,54 @@
-@import './settings.scss';
+// Importation des polices
 
-// NavBar
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Shrikhand&display=swap');
 
-.navigation {
-    width: 90%;
-    max-width: 1240px;
-    height: 170px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
+// Déclaration des variables
 
-    a {
-        text-decoration: none;
-    }
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
 
-    ul {
-        display: flex;
-        gap: 25px;
-    }
+// Déclaration des mixins
 
-    &__logo {
-        width: 210px;
-        height: 68px;
-    }
+@mixin arrow {
+    position: absolute;
+    top: 43%;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+    width: 47px;
+    height: 80px;
 }
 
-// Bannière
-
-.banner {
-    height: 220px;
+@mixin marginAuto {
+    display: flex;
     width: 90%;
     max-width: 1240px;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    background: url(../../public/img/banner.png) center/cover;
-    
-
-    &__overlay {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__title {
-        color: white;
-        font-size: 48px;
-    }
 }
 
-// Galerie
+// Paramètres généraux
 
-.gallery {
-    width: 90%;
-    max-width: 1240px;
-    margin: 30px auto;
-    background-color: $secondary-color;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    padding: 25px 0px;
-
-    &__card {
-        width: 340px;
-        height: 340px;
-        border-radius: 10px;
-        margin: 25px;
-        position: relative;
-
-        &__img {
-            width: 340px;
-            height: 340px;
-            border-radius: 10px;
-            object-fit: cover;
-            
-        }
-
-        & h2 {
-            position: absolute;
-            bottom: 0;
-            color: white;
-            font-size: 20px;
-            height: 52px;
-            display: flex;
-            flex-direction: column-reverse;
-            padding-left: 10px;
-        }
-
-        &__overlay {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-        border-radius: 10px;
-        position: absolute;
-        bottom: 0;
-
-        &:hover {
-            background-color: $primary-color;
-            transition: 0.3s;
-            opacity: 0.3;
-            cursor: pointer;
-        }
-        }
-    }
+main {
+    min-height: 70vh;
 }
 
-// Accomodation 
-
-.accomodation {
-    margin: 20px auto 0px auto;
-    width: 90%;
-    max-width: 1240px;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__title {
-        font-size: 36px;
-    }
-
-    &__location {
-        @include marginAuto;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-
-    &__host {
-        display: flex;
-        align-items: center;
-
-        &__image {
-            border-radius: 50%;
-            width: 64px;
-            height: 64px;
-        }
-
-        &__name {
-            width: 100px;
-            font-size: 18px
-        }
-    }
-
+body {
+    margin: 0;
 }
 
-.tags {
-    &__container {
-        @include marginAuto;
-        padding: 0;
-        gap: 10px;
-    }
-
-    &__list {
-        background-color: $primary-color;
-        color: white;
-        font-size: 14px;
-        min-width: 115px;
-        height: 25px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0px 5px
-    }
+p, h1, h2, h3, ul, li, a {
+    color: $primary-color;
+    font-family: montserrat, sans-serif;
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 24px;
 }
 
-// Slider
-
-.rightArrow {
-    @include arrow;
-    right: 40px;
-}
-
-.leftArrow {
-    @include arrow;
-    left: 40px;
-}
-
-.slider {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 1240px;
-    margin: auto;
-
-    &__image {
-        width: 100%;
-        max-width: 1240px;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
-    }
-}
-
-.slide {
-    opacity: 0;
-    transition-duration: 0.5s;
-}
-
-.slide.active {
-    width: 100%;
-    max-width: 1240px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition-duration: 0.5s;
-}
-
-// Page d'erreur
-
-.error {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    &__title {
-        font-weight: 700;
-        font-size: 288px;
-        margin-bottom: 0;
-    }
-
-    &__link {
-        margin: 100px 0px;
-        font-size: 18px;
-    }
-}
-
-.collapse {
-    @include marginAuto;
-    margin-top: 20px;
-    justify-content: space-between;
-
-    &__dropdown {
-        width: 47%;
-
-        &__arrow {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        }
-        
-        &__content {
-            background-color: $secondary-color;
-            height: 250px;
-            border-radius: 10px;
-            display: flex;
-            flex-flow: column wrap;
-
-                & p {
-                    font-size: 18px;
-                    padding-left: 15px;
-                    margin: 34px 0px;
-                }
-
-                & li {
-                    font-size: 18px;
-                    margin-top: 10px;
-                }
-
-                & ul {
-                    padding-left: 15px;
-                }
-            }
-            
-            &__title {
-                width: 100%;
-                background-color: $primary-color;
-                color: white;
-                border-radius: 10px;
-                height: 52px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-
-                & h2 {
-                    margin-left: 10px;
-                    color: white;
-                    font-size: 18px;
-                }            
-            }
-    }
-}
-
-.dropdownArrow {
-    margin-right: 10px;
-    transform: rotate(180deg);
-    transition: transform 0.3s;
-}
-
-.dropdownArrow.true {
-    transform: rotate(0deg);
-}
-
-// Footer
-
-.footer {
-    width: 100%;
-    height: 200px;
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    & img {
-        margin-top: 30px;
-    }
-
-    & h3 {
-        color: white;
-    }
-}
+@import './home.scss';
+@import './accomodation.scss';
+@import './error.scss';
+@import './navbar.scss';
+@import './footer.scss';
+@import './banner.scss';
+@import './collapse.scss';
+@import './media-queries.scss';
