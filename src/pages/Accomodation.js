@@ -6,10 +6,16 @@ import rentals from "../data/data.json";
 import Tags from "../components/Tags";
 import Collapse from "../components/Collapse";
 import Stars from "../components/Stars";
+import Error from "./Error";
 
 const Accomodation = () => {
   const { rentalId } = useParams();
   const selectedRental = rentals.find((rental) => rental.id === rentalId);
+
+  if (!selectedRental) {
+    return <Error />;
+  }
+
   return (
     <main>
       <Slider slides={selectedRental.pictures} />
