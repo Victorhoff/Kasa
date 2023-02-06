@@ -5,6 +5,7 @@
     // NavBar
 
     .navigation {
+        height: 100px;
 
         ul {
             gap: 15px;
@@ -69,15 +70,15 @@
     .rightArrow, .leftArrow {
         width: 12px;
         height: 24px;
-        top: 47%;
+        top: 45%;
     }
 
     .rightArrow {
-        right: 20px
+        right: 15px
     }
 
     .leftArrow {
-        left: 20px;
+        left: 15px;
     }
     
     .accomodation {

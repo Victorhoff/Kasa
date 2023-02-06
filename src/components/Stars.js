@@ -5,17 +5,17 @@ const Stars = ({ rating }) => {
 
   return (
     <div className="rating">
-      {ratingScale.map((star) =>
+      {ratingScale.map((star, index) =>
         rating >= star ? (
           <img
-            key={ratingScale.toString()}
+            key={index}
             className="rating__icon"
             src={"/img/redstar.png"}
             alt="étoile rouge"
           />
         ) : (
           <img
-            key={ratingScale.toString()}
+            key={index}
             className="rating__icon"
             src={"/img/greystar.png"}
             alt="étoile grise"

@@ -11,7 +11,7 @@ $secondary-color: #F6F6F6;
 
 @mixin arrow {
     position: absolute;
-    top: 43%;
+    bottom: 40%;
     z-index: 10;
     cursor: pointer;
     user-select: none;

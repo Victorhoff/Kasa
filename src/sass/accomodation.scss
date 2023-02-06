@@ -2,12 +2,12 @@
 
 .rightArrow {
     @include arrow;
-    right: 40px;
+    right: 25px;
 }
 
 .leftArrow {
     @include arrow;
-    left: 40px;
+    left: 25px;
 }
 
 .slider {
